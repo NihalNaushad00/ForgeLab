@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1F8CB0C8C6443BF900BD4C4 /* ForgeLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */; };
+		2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B68491F174CEF936D6BE6 /* Project.swift */; };
+		BEFC3915814E40DAAAC4F156 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60838F7E844D1F99890340 /* Milestone.swift */; };
+		35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91D87B0B34E4BA203659D /* WorkPackage.swift */; };
+		CE6614F0E9424925B12B74DA /* ProjectTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */; };
+		9A230FE779C447C483A35751 /* ProductSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */; };
+		F947273212B4445FAA9E16EF /* BuildSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7439F453E420F8356AFEB /* BuildSpecification.swift */; };
+		BC6CE44DCA374DF7943F1474 /* ArchitectureDecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FE719A4B949B58C051876 /* ArchitectureDecision.swift */; };
+		DE2C7EA00BE3477389438CD8 /* ValidationReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E778A7EA0046D48C9BA08F /* ValidationReport.swift */; };
+		9EDF7C35C6214D54B5BBCF46 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801575C66C094A77AE73FC06 /* ProjectStore.swift */; };
+		0E7AA17303484DEC932C6A36 /* JSONProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */; };
+		CA680FA41010402EA2F3B5AA /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3454748DD948FD9C102E91 /* ProjectRepository.swift */; };
+		4A83183C4EB3427AAC61D67A /* LocalProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */; };
+		B69A495BB4F54332AA196B88 /* ProjectWorkspaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */; };
+		F9E4144B0B3F41A1875245F0 /* WorkspaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */; };
+		ED649A63FEA441C7BAF723C7 /* ProjectWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */; };
+		DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */; };
+		95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */; };
+		C2FD6D2C10D64B3DA0AB0A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C1E15BD4644AA39BBD2630 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF366B978299477FAF468F95 /* ForgeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForgeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeLabApp.swift; sourceTree = "<group>"; };
+		3A9B68491F174CEF936D6BE6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		FC60838F7E844D1F99890340 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		46A91D87B0B34E4BA203659D /* WorkPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkPackage.swift; sourceTree = "<group>"; };
+		0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTask.swift; sourceTree = "<group>"; };
+		E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecification.swift; sourceTree = "<group>"; };
+		F1E7439F453E420F8356AFEB /* BuildSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpecification.swift; sourceTree = "<group>"; };
+		766FE719A4B949B58C051876 /* ArchitectureDecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDecision.swift; sourceTree = "<group>"; };
+		52E778A7EA0046D48C9BA08F /* ValidationReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationReport.swift; sourceTree = "<group>"; };
+		801575C66C094A77AE73FC06 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONProjectStore.swift; sourceTree = "<group>"; };
+		2F3454748DD948FD9C102E91 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProjectRepository.swift; sourceTree = "<group>"; };
+		1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceViewModel.swift; sourceTree = "<group>"; };
+		3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceSection.swift; sourceTree = "<group>"; };
+		9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceView.swift; sourceTree = "<group>"; };
+		F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePlaceholderView.swift; sourceTree = "<group>"; };
+		BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProjectRepository.swift; sourceTree = "<group>"; };
+		14C1E15BD4644AA39BBD2630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BCA08B2010149BAA4E06A97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14E6546C67F042AD9AEDD453 = {
+			isa = PBXGroup;
+			children = (
+				7549989937354BAAB38A4E61 /* ForgeLab */,
+				FF4E4B55440745E791D8BD00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF4E4B55440745E791D8BD00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF366B978299477FAF468F95 /* ForgeLab.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7549989937354BAAB38A4E61 /* ForgeLab */ = {
+			isa = PBXGroup;
+			children = (
+				CD102299483945ABA3045562 /* App */,
+				AD94897CD4054B43B6BF8283 /* Core */,
+				37BC2C4B4D134364812D5FE7 /* Features */,
+				C7A6CF76F7B4494A99EA90C0 /* Models */,
+				96530B6EEC9B4EC8A71045F2 /* Resources */,
+				DE55F13445E24D11B1CD3C92 /* Services */,
+				A8EFD2D66D1B49439CA8BF8C /* Utilities */,
+			);
+			path = ForgeLab;
+			sourceTree = "<group>";
+		};
+		CD102299483945ABA3045562 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AD94897CD4054B43B6BF8283 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DE9A72A61C614AD3B544BE1E /* Persistence */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DE9A72A61C614AD3B544BE1E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				801575C66C094A77AE73FC06 /* ProjectStore.swift */,
+				3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		37BC2C4B4D134364812D5FE7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				74A551DF10964AEC96EF1705 /* ProjectWorkspace */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		74A551DF10964AEC96EF1705 /* ProjectWorkspace */ = {
+			isa = PBXGroup;
+			children = (
+				B90118756BE14F56AB9FFECC /* ViewModels */,
+				2BF426B4AFD1427986E6CAC5 /* Views */,
+			);
+			path = ProjectWorkspace;
+			sourceTree = "<group>";
+		};
+		B90118756BE14F56AB9FFECC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */,
+				3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2BF426B4AFD1427986E6CAC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */,
+				F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7A6CF76F7B4494A99EA90C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A9B68491F174CEF936D6BE6 /* Project.swift */,
+				FC60838F7E844D1F99890340 /* Milestone.swift */,
+				46A91D87B0B34E4BA203659D /* WorkPackage.swift */,
+				0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */,
+				E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */,
+				F1E7439F453E420F8356AFEB /* BuildSpecification.swift */,
+				766FE719A4B949B58C051876 /* ArchitectureDecision.swift */,
+				52E778A7EA0046D48C9BA08F /* ValidationReport.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96530B6EEC9B4EC8A71045F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14C1E15BD4644AA39BBD2630 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE55F13445E24D11B1CD3C92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2F3454748DD948FD9C102E91 /* ProjectRepository.swift */,
+				3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A8EFD2D66D1B49439CA8BF8C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E0AF70FF6564F0DA27293CB /* ForgeLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4B4437AEB04ECCB100FF6D /* Build configuration list for PBXNativeTarget "ForgeLab" */;
+			buildPhases = (
+				6F1C7EB4D86243258EDFD589 /* Sources */,
+				3BCA08B2010149BAA4E06A97 /* Frameworks */,
+				E4066DC6ADE84DF6B98EF34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForgeLab;
+			productName = ForgeLab;
+			productReference = FF366B978299477FAF468F95 /* ForgeLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91A23DB82A5D4585A36C5D5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					3E0AF70FF6564F0DA27293CB = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 9BEECC26A38344389543A9C3 /* Build configuration list for PBXProject "ForgeLab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14E6546C67F042AD9AEDD453;
+			productRefGroup = FF4E4B55440745E791D8BD00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E0AF70FF6564F0DA27293CB /* ForgeLab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4066DC6ADE84DF6B98EF34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FD6D2C10D64B3DA0AB0A56 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F1C7EB4D86243258EDFD589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F8CB0C8C6443BF900BD4C4 /* ForgeLabApp.swift in Sources */,
+				2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */,
+				BEFC3915814E40DAAAC4F156 /* Milestone.swift in Sources */,
+				35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */,
+				CE6614F0E9424925B12B74DA /* ProjectTask.swift in Sources */,
+				9A230FE779C447C483A35751 /* ProductSpecification.swift in Sources */,
+				F947273212B4445FAA9E16EF /* BuildSpecification.swift in Sources */,
+				BC6CE44DCA374DF7943F1474 /* ArchitectureDecision.swift in Sources */,
+				DE2C7EA00BE3477389438CD8 /* ValidationReport.swift in Sources */,
+				9EDF7C35C6214D54B5BBCF46 /* ProjectStore.swift in Sources */,
+				0E7AA17303484DEC932C6A36 /* JSONProjectStore.swift in Sources */,
+				CA680FA41010402EA2F3B5AA /* ProjectRepository.swift in Sources */,
+				4A83183C4EB3427AAC61D67A /* LocalProjectRepository.swift in Sources */,
+				B69A495BB4F54332AA196B88 /* ProjectWorkspaceViewModel.swift in Sources */,
+				F9E4144B0B3F41A1875245F0 /* WorkspaceSection.swift in Sources */,
+				ED649A63FEA441C7BAF723C7 /* ProjectWorkspaceView.swift in Sources */,
+				DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */,
+				95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8B71E29147D24230B0B0BA84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20F6BA0E9E2E489BAF74154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC155D7F7A6C4D7EBB1456FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ForgeLab";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgelab.ForgeLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48A9425A0729448CAD64D98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ForgeLab";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgelab.ForgeLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BEECC26A38344389543A9C3 /* Build configuration list for PBXProject "ForgeLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B71E29147D24230B0B0BA84 /* Debug */,
+				20F6BA0E9E2E489BAF74154C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4B4437AEB04ECCB100FF6D /* Build configuration list for PBXNativeTarget "ForgeLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC155D7F7A6C4D7EBB1456FB /* Debug */,
+				48A9425A0729448CAD64D98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91A23DB82A5D4585A36C5D5F /* Project object */;
+}
