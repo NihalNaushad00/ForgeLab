@@ -38,8 +38,15 @@ struct ProjectWorkspaceView: View {
 }
 
 #Preview {
+    let project = Project(
+        name: "Sample Project",
+        summary: "A preview project for SwiftUI canvas rendering.",
+        type: .iOSApp
+    )
+
     ProjectWorkspaceView(
         viewModel: ProjectWorkspaceViewModel(
+            project: project,
             projectRepository: PreviewProjectRepository()
         )
     )

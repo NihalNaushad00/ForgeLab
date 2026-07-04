@@ -11,14 +11,28 @@ actor LocalProjectRepository: ProjectRepository {
         try await store.loadProjects()
     }
 
+    func project(withID id: UUID) async throws -> Project? {
+        try await store.loadProjects().first { $0.id == id }
+    }
+
     func save(_ project: Project) async throws {
+        var projectToSave = project
+        projectToSave.updatedAt = Date()
+
         var projects = try await store.loadProjects()
 
-        if let index = projects.firstIndex(where: { $0.id == project.id }) {
-            projects[index] = project
+        if let index = projects.firstIndex(where: { $0.id == projectToSave.id }) {
+            projects[index] = projectToSave
         } else {
-            projects.append(project)
+            projects.append(projectToSave)
         }
+
+        try await store.saveProjects(projects)
+    }
+
+    func deleteProject(withID id: UUID) async throws {
+        let projects = try await store.loadProjects()
+            .filter { $0.id != id }
 
         try await store.saveProjects(projects)
     }

@@ -8,24 +8,19 @@ final class ProjectWorkspaceViewModel: ObservableObject {
 
     private let projectRepository: ProjectRepository
 
-    init(projectRepository: ProjectRepository) {
+    init(project: Project, projectRepository: ProjectRepository) {
         self.projectRepository = projectRepository
-        project = Project(
-            name: "Untitled Project",
-            summary: "A documentation-first project workspace."
-        )
+        self.project = project
         selectedSection = WorkspaceSection.allCases.first
     }
 
     func load() async {
         do {
-            if let savedProject = try await projectRepository.fetchProjects().first {
+            if let savedProject = try await projectRepository.project(withID: project.id) {
                 project = savedProject
-            } else {
-                try await projectRepository.save(project)
             }
         } catch {
-            // The workspace remains usable with its in-memory starter project.
+            // The workspace remains usable with its current project snapshot.
         }
     }
 }

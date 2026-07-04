@@ -18,22 +18,49 @@ struct WorkspacePlaceholderView: View {
 
             Divider()
 
-            ContentUnavailableView(
-                section.title,
-                systemImage: section.systemImage,
-                description: Text("This section is reserved for a future milestone.")
-            )
+            if section == .overview {
+                projectOverview
+            } else {
+                ContentUnavailableView(
+                    section.title,
+                    systemImage: section.systemImage,
+                    description: Text("This section is reserved for a future milestone.")
+                )
+            }
 
             Spacer()
         }
         .padding()
         .navigationTitle(section.title)
     }
+
+    private var projectOverview: some View {
+        Grid(alignment: .leading, horizontalSpacing: 16, verticalSpacing: 12) {
+            GridRow {
+                Text("Type")
+                    .foregroundStyle(.secondary)
+                Text(project.type.displayName)
+            }
+
+            GridRow {
+                Text("Created")
+                    .foregroundStyle(.secondary)
+                Text(DateFormatter.forgeLabProjectDate.string(from: project.createdAt))
+            }
+
+            GridRow {
+                Text("Last Modified")
+                    .foregroundStyle(.secondary)
+                Text(DateFormatter.forgeLabProjectDate.string(from: project.updatedAt))
+            }
+        }
+        .font(.body)
+    }
 }
 
 #Preview {
     WorkspacePlaceholderView(
-        project: Project(name: "Sample Project"),
+        project: Project(name: "Sample Project", type: .iOSApp),
         section: .overview
     )
 }

@@ -11,8 +11,8 @@ struct ForgeLabApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ProjectWorkspaceView(
-                viewModel: ProjectWorkspaceViewModel(
+            ProjectListView(
+                viewModel: ProjectListViewModel(
                     projectRepository: projectRepository
                 )
             )

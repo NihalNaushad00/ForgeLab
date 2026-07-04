@@ -26,6 +26,14 @@
 		DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */; };
 		95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */; };
 		C2FD6D2C10D64B3DA0AB0A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C1E15BD4644AA39BBD2630 /* Assets.xcassets */; };
+		1B32DD16EA0D46518F59DC2B /* ProjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */; };
+		2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */; };
+		5D64F7AAECD74A9AB3001698 /* ProjectFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */; };
+		88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558BF3276E254A37869285B4 /* ProjectListView.swift */; };
+		FC369F6739E94A6C8E206D04 /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */; };
+		D64F650E3AFB48DAAB9CC60A /* ProjectFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68203398F22F4CB281E10B62 /* ProjectFormView.swift */; };
+		A68B925E9A4D4382945F70D3 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */; };
+		6BF200DF47644E0BB5610D13 /* DateFormatter+ForgeLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,14 @@
 		F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePlaceholderView.swift; sourceTree = "<group>"; };
 		BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProjectRepository.swift; sourceTree = "<group>"; };
 		14C1E15BD4644AA39BBD2630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectType.swift; sourceTree = "<group>"; };
+		4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewModel.swift; sourceTree = "<group>"; };
+		AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormViewModel.swift; sourceTree = "<group>"; };
+		558BF3276E254A37869285B4 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
+		F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
+		68203398F22F4CB281E10B62 /* ProjectFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormView.swift; sourceTree = "<group>"; };
+		B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ForgeLab.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +136,39 @@
 		37BC2C4B4D134364812D5FE7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */,
 				74A551DF10964AEC96EF1705 /* ProjectWorkspace */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */ = {
+			isa = PBXGroup;
+			children = (
+				0C91BCACE3024E2DB3408748 /* ViewModels */,
+				8028F2D90F4D4062B316AD81 /* Views */,
+			);
+			path = ProjectManagement;
+			sourceTree = "<group>";
+		};
+		0C91BCACE3024E2DB3408748 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */,
+				AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8028F2D90F4D4062B316AD81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				558BF3276E254A37869285B4 /* ProjectListView.swift */,
+				F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */,
+				68203398F22F4CB281E10B62 /* ProjectFormView.swift */,
+				B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		74A551DF10964AEC96EF1705 /* ProjectWorkspace */ = {
@@ -156,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9B68491F174CEF936D6BE6 /* Project.swift */,
+				0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */,
 				FC60838F7E844D1F99890340 /* Milestone.swift */,
 				46A91D87B0B34E4BA203659D /* WorkPackage.swift */,
 				0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */,
@@ -188,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */,
+				A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -279,6 +327,14 @@
 				ED649A63FEA441C7BAF723C7 /* ProjectWorkspaceView.swift in Sources */,
 				DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */,
 				95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */,
+				1B32DD16EA0D46518F59DC2B /* ProjectType.swift in Sources */,
+				2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */,
+				5D64F7AAECD74A9AB3001698 /* ProjectFormViewModel.swift in Sources */,
+				88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */,
+				FC369F6739E94A6C8E206D04 /* ProjectRowView.swift in Sources */,
+				D64F650E3AFB48DAAB9CC60A /* ProjectFormView.swift in Sources */,
+				A68B925E9A4D4382945F70D3 /* ProjectDetailView.swift in Sources */,
+				6BF200DF47644E0BB5610D13 /* DateFormatter+ForgeLab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

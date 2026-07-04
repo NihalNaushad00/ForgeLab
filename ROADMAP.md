@@ -11,15 +11,26 @@
 - Added a placeholder project workspace navigation experience.
 - Initialized repository documentation.
 
+### Milestone 2: Project Management Foundation
+
+- Added a project list with empty state.
+- Added project creation with required name and required project type.
+- Added project details with metadata.
+- Added editing for project name, description, and type.
+- Added confirmed deletion.
+- Added workspace navigation for selected projects.
+- Extended local persistence through the existing repository pattern.
+
 ## Recommended Next Milestone
 
-### Milestone 2: Project Creation and Editing
+### Milestone 3: Requirements and Specification Capture
 
-- Add project list and project creation flow.
-- Add editable project overview fields.
-- Add basic requirements capture.
+- Add basic requirements capture for each project.
+- Add product specification editing.
+- Add build specification editing.
+- Add documentation status indicators.
 - Add focused unit tests for repository and model behavior.
-- Add validation for required project metadata.
+- Add validation rules for project planning documents.
 
 ## Future Milestones
 

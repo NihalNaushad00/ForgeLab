@@ -19,8 +19,12 @@ actor JSONProjectStore: ProjectStore {
             return []
         }
 
-        let data = try Data(contentsOf: fileURL)
-        return try decoder.decode([Project].self, from: data)
+        do {
+            let data = try Data(contentsOf: fileURL)
+            return try decoder.decode([Project].self, from: data)
+        } catch {
+            return []
+        }
     }
 
     func saveProjects(_ projects: [Project]) async throws {
