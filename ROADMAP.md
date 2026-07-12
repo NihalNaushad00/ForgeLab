@@ -21,22 +21,24 @@
 - Added workspace navigation for selected projects.
 - Extended local persistence through the existing repository pattern.
 
-## Recommended Next Milestone
+### Milestone 3: Discovery Engine
 
-### Milestone 3: Requirements and Specification Capture
-
-- Add basic requirements capture for each project.
-- Add product specification editing.
-- Add build specification editing.
-- Add documentation status indicators.
-- Add focused unit tests for repository and model behavior.
-- Add validation rules for project planning documents.
+- Added a guided Discovery Session in the Project Workspace.
+- Added step-by-step project discovery questions for basics, users, platform, features, authentication, storage, APIs, difficulty, and constraints.
+- Added progress indicators with current question count and completion percentage.
+- Added a review screen for confirming or editing answers.
+- Persisted completed Discovery Sessions with projects through the existing repository pattern.
+- Added workspace display for saved discovery answers.
 
 ## Future Milestones
 
+- Requirements and specification capture.
 - Specification authoring workflows.
 - Milestone and task planning.
 - Documentation review surfaces.
 - Validation report generation.
 - Learning resource organization.
+- Planner Agent.
+- Coding Agent.
+- Project Digital Twin.
 - AI integrations after the core workflow is stable.

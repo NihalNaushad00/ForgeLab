@@ -7,64 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1F8CB0C8C6443BF900BD4C4 /* ForgeLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */; };
-		2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B68491F174CEF936D6BE6 /* Project.swift */; };
-		BEFC3915814E40DAAAC4F156 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60838F7E844D1F99890340 /* Milestone.swift */; };
-		35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91D87B0B34E4BA203659D /* WorkPackage.swift */; };
-		CE6614F0E9424925B12B74DA /* ProjectTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */; };
-		9A230FE779C447C483A35751 /* ProductSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */; };
-		F947273212B4445FAA9E16EF /* BuildSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7439F453E420F8356AFEB /* BuildSpecification.swift */; };
-		BC6CE44DCA374DF7943F1474 /* ArchitectureDecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FE719A4B949B58C051876 /* ArchitectureDecision.swift */; };
-		DE2C7EA00BE3477389438CD8 /* ValidationReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E778A7EA0046D48C9BA08F /* ValidationReport.swift */; };
-		9EDF7C35C6214D54B5BBCF46 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801575C66C094A77AE73FC06 /* ProjectStore.swift */; };
 		0E7AA17303484DEC932C6A36 /* JSONProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */; };
-		CA680FA41010402EA2F3B5AA /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3454748DD948FD9C102E91 /* ProjectRepository.swift */; };
-		4A83183C4EB3427AAC61D67A /* LocalProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */; };
-		B69A495BB4F54332AA196B88 /* ProjectWorkspaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */; };
-		F9E4144B0B3F41A1875245F0 /* WorkspaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */; };
-		ED649A63FEA441C7BAF723C7 /* ProjectWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */; };
-		DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */; };
-		95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */; };
-		C2FD6D2C10D64B3DA0AB0A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C1E15BD4644AA39BBD2630 /* Assets.xcassets */; };
 		1B32DD16EA0D46518F59DC2B /* ProjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */; };
+		A10000000000000000000001 /* DiscoverySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* DiscoverySession.swift */; };
+		A10000000000000000000002 /* DiscoveryQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* DiscoveryQuestion.swift */; };
+		A10000000000000000000003 /* DiscoverySessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* DiscoverySessionViewModel.swift */; };
+		A10000000000000000000004 /* DiscoverySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* DiscoverySessionView.swift */; };
+		A10000000000000000000005 /* DiscoveryReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* DiscoveryReviewView.swift */; };
+		A10000000000000000000006 /* DiscoveryAnswerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* DiscoveryAnswerSummaryView.swift */; };
 		2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */; };
+		2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B68491F174CEF936D6BE6 /* Project.swift */; };
+		35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91D87B0B34E4BA203659D /* WorkPackage.swift */; };
+		4A83183C4EB3427AAC61D67A /* LocalProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */; };
 		5D64F7AAECD74A9AB3001698 /* ProjectFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */; };
-		88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558BF3276E254A37869285B4 /* ProjectListView.swift */; };
-		FC369F6739E94A6C8E206D04 /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */; };
-		D64F650E3AFB48DAAB9CC60A /* ProjectFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68203398F22F4CB281E10B62 /* ProjectFormView.swift */; };
-		A68B925E9A4D4382945F70D3 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */; };
 		6BF200DF47644E0BB5610D13 /* DateFormatter+ForgeLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */; };
+		88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558BF3276E254A37869285B4 /* ProjectListView.swift */; };
+		95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */; };
+		9A230FE779C447C483A35751 /* ProductSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */; };
+		9EDF7C35C6214D54B5BBCF46 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801575C66C094A77AE73FC06 /* ProjectStore.swift */; };
+		A68B925E9A4D4382945F70D3 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */; };
+		B69A495BB4F54332AA196B88 /* ProjectWorkspaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */; };
+		BC6CE44DCA374DF7943F1474 /* ArchitectureDecision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FE719A4B949B58C051876 /* ArchitectureDecision.swift */; };
+		BEFC3915814E40DAAAC4F156 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC60838F7E844D1F99890340 /* Milestone.swift */; };
+		C2FD6D2C10D64B3DA0AB0A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C1E15BD4644AA39BBD2630 /* Assets.xcassets */; };
+		CA680FA41010402EA2F3B5AA /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3454748DD948FD9C102E91 /* ProjectRepository.swift */; };
+		CE6614F0E9424925B12B74DA /* ProjectTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */; };
+		D64F650E3AFB48DAAB9CC60A /* ProjectFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68203398F22F4CB281E10B62 /* ProjectFormView.swift */; };
+		DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */; };
+		DE2C7EA00BE3477389438CD8 /* ValidationReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E778A7EA0046D48C9BA08F /* ValidationReport.swift */; };
+		ED649A63FEA441C7BAF723C7 /* ProjectWorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */; };
+		F1F8CB0C8C6443BF900BD4C4 /* ForgeLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */; };
+		F947273212B4445FAA9E16EF /* BuildSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7439F453E420F8356AFEB /* BuildSpecification.swift */; };
+		F9E4144B0B3F41A1875245F0 /* WorkspaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */; };
+		FC369F6739E94A6C8E206D04 /* ProjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF366B978299477FAF468F95 /* ForgeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForgeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeLabApp.swift; sourceTree = "<group>"; };
-		3A9B68491F174CEF936D6BE6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		FC60838F7E844D1F99890340 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
-		46A91D87B0B34E4BA203659D /* WorkPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkPackage.swift; sourceTree = "<group>"; };
-		0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTask.swift; sourceTree = "<group>"; };
-		E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecification.swift; sourceTree = "<group>"; };
-		F1E7439F453E420F8356AFEB /* BuildSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpecification.swift; sourceTree = "<group>"; };
-		766FE719A4B949B58C051876 /* ArchitectureDecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDecision.swift; sourceTree = "<group>"; };
-		52E778A7EA0046D48C9BA08F /* ValidationReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationReport.swift; sourceTree = "<group>"; };
-		801575C66C094A77AE73FC06 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
-		3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONProjectStore.swift; sourceTree = "<group>"; };
-		2F3454748DD948FD9C102E91 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
-		3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProjectRepository.swift; sourceTree = "<group>"; };
-		1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceViewModel.swift; sourceTree = "<group>"; };
-		3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceSection.swift; sourceTree = "<group>"; };
-		9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceView.swift; sourceTree = "<group>"; };
-		F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePlaceholderView.swift; sourceTree = "<group>"; };
-		BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProjectRepository.swift; sourceTree = "<group>"; };
-		14C1E15BD4644AA39BBD2630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectType.swift; sourceTree = "<group>"; };
+		0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTask.swift; sourceTree = "<group>"; };
+		14C1E15BD4644AA39BBD2630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1691154652DE42D58F451362 /* ProjectWorkspaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceViewModel.swift; sourceTree = "<group>"; };
+		2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgeLabApp.swift; sourceTree = "<group>"; };
+		2F3454748DD948FD9C102E91 /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		3A9B68491F174CEF936D6BE6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		3ACC25CEE4CE4AE59EAEDE27 /* LocalProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProjectRepository.swift; sourceTree = "<group>"; };
+		3DE5DDCA76CB425ABEB8109D /* WorkspaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceSection.swift; sourceTree = "<group>"; };
+		3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONProjectStore.swift; sourceTree = "<group>"; };
+		46A91D87B0B34E4BA203659D /* WorkPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkPackage.swift; sourceTree = "<group>"; };
 		4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewModel.swift; sourceTree = "<group>"; };
-		AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormViewModel.swift; sourceTree = "<group>"; };
+		52E778A7EA0046D48C9BA08F /* ValidationReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationReport.swift; sourceTree = "<group>"; };
 		558BF3276E254A37869285B4 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
-		F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
 		68203398F22F4CB281E10B62 /* ProjectFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormView.swift; sourceTree = "<group>"; };
-		B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		766FE719A4B949B58C051876 /* ArchitectureDecision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDecision.swift; sourceTree = "<group>"; };
+		801575C66C094A77AE73FC06 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWorkspaceView.swift; sourceTree = "<group>"; };
+		A20000000000000000000001 /* DiscoverySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySession.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* DiscoveryQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryQuestion.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* DiscoverySessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySessionViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* DiscoverySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverySessionView.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* DiscoveryReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryReviewView.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* DiscoveryAnswerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryAnswerSummaryView.swift; sourceTree = "<group>"; };
 		A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ForgeLab.swift"; sourceTree = "<group>"; };
+		AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormViewModel.swift; sourceTree = "<group>"; };
+		B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProjectRepository.swift; sourceTree = "<group>"; };
+		E7E4DFBAA0D74D7D8B558FC5 /* ProductSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSpecification.swift; sourceTree = "<group>"; };
+		F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePlaceholderView.swift; sourceTree = "<group>"; };
+		F1E7439F453E420F8356AFEB /* BuildSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpecification.swift; sourceTree = "<group>"; };
+		F9A227331B174A55AF1C7E9A /* ProjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRowView.swift; sourceTree = "<group>"; };
+		FC60838F7E844D1F99890340 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		FF366B978299477FAF468F95 /* ForgeLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForgeLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C91BCACE3024E2DB3408748 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */,
+				AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		14E6546C67F042AD9AEDD453 = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +107,41 @@
 			);
 			sourceTree = "<group>";
 		};
-		FF4E4B55440745E791D8BD00 /* Products */ = {
+		2BF426B4AFD1427986E6CAC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FF366B978299477FAF468F95 /* ForgeLab.app */,
+				9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */,
+				F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */,
 			);
-			name = Products;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		37BC2C4B4D134364812D5FE7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000001 /* Discovery */,
+				4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */,
+				74A551DF10964AEC96EF1705 /* ProjectWorkspace */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */ = {
+			isa = PBXGroup;
+			children = (
+				0C91BCACE3024E2DB3408748 /* ViewModels */,
+				8028F2D90F4D4062B316AD81 /* Views */,
+			);
+			path = ProjectManagement;
+			sourceTree = "<group>";
+		};
+		74A551DF10964AEC96EF1705 /* ProjectWorkspace */ = {
+			isa = PBXGroup;
+			children = (
+				B90118756BE14F56AB9FFECC /* ViewModels */,
+				2BF426B4AFD1427986E6CAC5 /* Views */,
+			);
+			path = ProjectWorkspace;
 			sourceTree = "<group>";
 		};
 		7549989937354BAAB38A4E61 /* ForgeLab */ = {
@@ -108,58 +158,6 @@
 			path = ForgeLab;
 			sourceTree = "<group>";
 		};
-		CD102299483945ABA3045562 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		AD94897CD4054B43B6BF8283 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				DE9A72A61C614AD3B544BE1E /* Persistence */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		DE9A72A61C614AD3B544BE1E /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				801575C66C094A77AE73FC06 /* ProjectStore.swift */,
-				3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		37BC2C4B4D134364812D5FE7 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */,
-				74A551DF10964AEC96EF1705 /* ProjectWorkspace */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
-		4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */ = {
-			isa = PBXGroup;
-			children = (
-				0C91BCACE3024E2DB3408748 /* ViewModels */,
-				8028F2D90F4D4062B316AD81 /* Views */,
-			);
-			path = ProjectManagement;
-			sourceTree = "<group>";
-		};
-		0C91BCACE3024E2DB3408748 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */,
-				AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		8028F2D90F4D4062B316AD81 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,13 +169,57 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		74A551DF10964AEC96EF1705 /* ProjectWorkspace */ = {
+		96530B6EEC9B4EC8A71045F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B90118756BE14F56AB9FFECC /* ViewModels */,
-				2BF426B4AFD1427986E6CAC5 /* Views */,
+				14C1E15BD4644AA39BBD2630 /* Assets.xcassets */,
 			);
-			path = ProjectWorkspace;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000001 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000002 /* ViewModels */,
+				A30000000000000000000003 /* Views */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000002 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000002 /* DiscoveryQuestion.swift */,
+				A20000000000000000000003 /* DiscoverySessionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000003 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000004 /* DiscoverySessionView.swift */,
+				A20000000000000000000005 /* DiscoveryReviewView.swift */,
+				A20000000000000000000006 /* DiscoveryAnswerSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8EFD2D66D1B49439CA8BF8C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */,
+				A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AD94897CD4054B43B6BF8283 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DE9A72A61C614AD3B544BE1E /* Persistence */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		B90118756BE14F56AB9FFECC /* ViewModels */ = {
@@ -189,20 +231,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		2BF426B4AFD1427986E6CAC5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9FDBDE29018C415FAE186E89 /* ProjectWorkspaceView.swift */,
-				F112FBFF65984126A70C1864 /* WorkspacePlaceholderView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		C7A6CF76F7B4494A99EA90C0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3A9B68491F174CEF936D6BE6 /* Project.swift */,
 				0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */,
+				A20000000000000000000001 /* DiscoverySession.swift */,
 				FC60838F7E844D1F99890340 /* Milestone.swift */,
 				46A91D87B0B34E4BA203659D /* WorkPackage.swift */,
 				0F9115FB38A94B0E86D04D25 /* ProjectTask.swift */,
@@ -214,12 +248,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		96530B6EEC9B4EC8A71045F2 /* Resources */ = {
+		CD102299483945ABA3045562 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				14C1E15BD4644AA39BBD2630 /* Assets.xcassets */,
+				2F00FBC7C786494F91EB2F86 /* ForgeLabApp.swift */,
 			);
-			path = Resources;
+			path = App;
 			sourceTree = "<group>";
 		};
 		DE55F13445E24D11B1CD3C92 /* Services */ = {
@@ -231,13 +265,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A8EFD2D66D1B49439CA8BF8C /* Utilities */ = {
+		DE9A72A61C614AD3B544BE1E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				BBCC4E56956F4205BA20482A /* PreviewProjectRepository.swift */,
-				A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */,
+				801575C66C094A77AE73FC06 /* ProjectStore.swift */,
+				3E172C6EE40746D1A0409CB5 /* JSONProjectStore.swift */,
 			);
-			path = Utilities;
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FF4E4B55440745E791D8BD00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF366B978299477FAF468F95 /* ForgeLab.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +353,7 @@
 			files = (
 				F1F8CB0C8C6443BF900BD4C4 /* ForgeLabApp.swift in Sources */,
 				2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */,
+				A10000000000000000000001 /* DiscoverySession.swift in Sources */,
 				BEFC3915814E40DAAAC4F156 /* Milestone.swift in Sources */,
 				35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */,
 				CE6614F0E9424925B12B74DA /* ProjectTask.swift in Sources */,
@@ -328,6 +371,11 @@
 				DD17D05507A1453FA650E613 /* WorkspacePlaceholderView.swift in Sources */,
 				95C6385D25D5460E80B8AFDE /* PreviewProjectRepository.swift in Sources */,
 				1B32DD16EA0D46518F59DC2B /* ProjectType.swift in Sources */,
+				A10000000000000000000002 /* DiscoveryQuestion.swift in Sources */,
+				A10000000000000000000003 /* DiscoverySessionViewModel.swift in Sources */,
+				A10000000000000000000004 /* DiscoverySessionView.swift in Sources */,
+				A10000000000000000000005 /* DiscoveryReviewView.swift in Sources */,
+				A10000000000000000000006 /* DiscoveryAnswerSummaryView.swift in Sources */,
 				2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */,
 				5D64F7AAECD74A9AB3001698 /* ProjectFormViewModel.swift in Sources */,
 				88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */,
@@ -341,6 +389,83 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		20F6BA0E9E2E489BAF74154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48A9425A0729448CAD64D98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9L3848T478;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ForgeLab;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgelab.ForgeLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8B71E29147D24230B0B0BA84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,59 +526,6 @@
 			};
 			name = Debug;
 		};
-		20F6BA0E9E2E489BAF74154C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		BC155D7F7A6C4D7EBB1456FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,9 +533,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9L3848T478;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "ForgeLab";
+				INFOPLIST_KEY_CFBundleDisplayName = ForgeLab;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -477,46 +550,23 @@
 			};
 			name = Debug;
 		};
-		48A9425A0729448CAD64D98B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "ForgeLab";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forgelab.ForgeLab;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BEECC26A38344389543A9C3 /* Build configuration list for PBXProject "ForgeLab" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B71E29147D24230B0B0BA84 /* Debug */,
-				20F6BA0E9E2E489BAF74154C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5C4B4437AEB04ECCB100FF6D /* Build configuration list for PBXNativeTarget "ForgeLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC155D7F7A6C4D7EBB1456FB /* Debug */,
 				48A9425A0729448CAD64D98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BEECC26A38344389543A9C3 /* Build configuration list for PBXProject "ForgeLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B71E29147D24230B0B0BA84 /* Debug */,
+				20F6BA0E9E2E489BAF74154C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.3.0 - 2026-07-12
+
+### Added
+
+- Added the Discovery Engine as a guided Project Workspace flow.
+- Added fixed discovery questions for project basics, users, platform, features, authentication, database needs, external services, difficulty, and constraints.
+- Added progress indicators showing question position and completion percentage.
+- Added a review screen for editing answers before confirmation.
+- Added persisted `DiscoverySession` and `DiscoveryAnswer` models.
+- Added workspace display for completed discovery answers.
+
+### Changed
+
+- `Project` now stores an optional completed discovery session.
+- Project workspace overview now includes Discovery status and actions.
+
+### Notes
+
+- Discovery only gathers information; it does not generate architecture, milestones, code, documentation, validation, or planning output.
+
 ## 0.2.0 - 2026-07-04
 
 ### Added

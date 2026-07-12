@@ -23,4 +23,15 @@ final class ProjectWorkspaceViewModel: ObservableObject {
             // The workspace remains usable with its current project snapshot.
         }
     }
+
+    func makeDiscoverySessionViewModel() -> DiscoverySessionViewModel {
+        DiscoverySessionViewModel(
+            project: project,
+            projectRepository: projectRepository
+        )
+    }
+
+    func updateProject(_ project: Project) {
+        self.project = project
+    }
 }

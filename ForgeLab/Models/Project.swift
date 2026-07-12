@@ -14,6 +14,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
     var architectureDecisions: [ArchitectureDecision]
     var validationReports: [ValidationReport]
     var learningResources: [String]
+    var discoverySession: DiscoverySession?
     let createdAt: Date
     var updatedAt: Date
 
@@ -31,6 +32,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         case architectureDecisions
         case validationReports
         case learningResources
+        case discoverySession
         case createdAt
         case updatedAt
     }
@@ -49,6 +51,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         architectureDecisions: [ArchitectureDecision] = [],
         validationReports: [ValidationReport] = [],
         learningResources: [String] = [],
+        discoverySession: DiscoverySession? = nil,
         createdAt: Date = Date(),
         updatedAt: Date = Date()
     ) {
@@ -65,6 +68,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         self.architectureDecisions = architectureDecisions
         self.validationReports = validationReports
         self.learningResources = learningResources
+        self.discoverySession = discoverySession
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
@@ -97,6 +101,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
             forKey: .validationReports
         ) ?? []
         learningResources = try container.decodeIfPresent([String].self, forKey: .learningResources) ?? []
+        discoverySession = try container.decodeIfPresent(DiscoverySession.self, forKey: .discoverySession)
         createdAt = try container.decodeIfPresent(Date.self, forKey: .createdAt) ?? Date()
         updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt) ?? createdAt
     }

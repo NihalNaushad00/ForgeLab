@@ -2,11 +2,11 @@
 
 ForgeLab is an iOS application for helping students and beginner developers turn software ideas into production-quality projects through a documentation-first workflow.
 
-The central object in the app is the `Project`. A project can contain requirements, specifications, documentation, milestones, work packages, tasks, generated files, validation reports, architecture decisions, and learning resources.
+The central object in the app is the `Project`. A project can contain discovery answers, requirements, specifications, documentation, milestones, work packages, tasks, generated files, validation reports, architecture decisions, and learning resources.
 
 ## Current Scope
 
-This repository currently implements the project management foundation:
+This repository currently implements the project management foundation and the first guided discovery workflow:
 
 - SwiftUI iOS app shell.
 - MVVM feature structure.
@@ -14,6 +14,7 @@ This repository currently implements the project management foundation:
 - Local JSON persistence foundation behind protocols.
 - Project list, creation, editing, deletion, and detail views.
 - Project workspace navigation with real project overview metadata.
+- Guided Discovery Sessions stored with projects.
 - Starter documentation structure.
 
 The current version intentionally does not include AI integrations, networking, authentication, cloud sync, team collaboration, or code generation workflows.
@@ -24,6 +25,7 @@ The current version intentionally does not include AI integrations, networking, 
 ForgeLab/
   App/                         App entry point and composition root
   Core/Persistence/            Persistence interfaces and local store
+  Features/Discovery/          Guided project discovery workflow
   Features/ProjectManagement/  Project list, details, and edit flows
   Features/ProjectWorkspace/   Workspace MVVM feature
   Models/                      Core domain models
@@ -49,6 +51,32 @@ The current environment only has Command Line Tools selected, so command-line `x
 - Open an existing project into its workspace.
 - Persist project changes locally between launches.
 
+## Milestone 3 Features
+
+- Start a guided Discovery Session from the Project Workspace overview.
+- Answer one focused project discovery question at a time.
+- Track progress with question count and completion percentage.
+- Review all collected answers before saving.
+- Edit answers from the review screen before confirmation.
+- Persist the completed Discovery Session with the project.
+- Reopen a project workspace and view saved discovery answers.
+
+The Discovery Engine only gathers project context. It does not generate architecture, milestones, documentation, code, validation reports, or implementation plans.
+
+## Milestone 3 Implementation Notes
+
+New model:
+
+- `DiscoverySession` stores completed discovery answers, completion time, and update time.
+- `DiscoveryAnswer` stores the question ID, prompt, category, and user response.
+- `Project` now owns an optional `discoverySession`, decoded as optional so existing local projects continue to load.
+
+New screens:
+
+- `DiscoverySessionView` presents the guided question flow.
+- `DiscoveryReviewView` presents the review and confirmation step.
+- `DiscoveryAnswerSummaryView` renders review rows.
+
 ## Milestone 2 Implementation Notes
 
 Architecture decisions:
@@ -69,6 +97,15 @@ Files added:
 - `ForgeLab/Features/ProjectManagement/Views/ProjectDetailView.swift`
 - `ForgeLab/Utilities/DateFormatter+ForgeLab.swift`
 
+Milestone 3 files added:
+
+- `ForgeLab/Models/DiscoverySession.swift`
+- `ForgeLab/Features/Discovery/ViewModels/DiscoveryQuestion.swift`
+- `ForgeLab/Features/Discovery/ViewModels/DiscoverySessionViewModel.swift`
+- `ForgeLab/Features/Discovery/Views/DiscoverySessionView.swift`
+- `ForgeLab/Features/Discovery/Views/DiscoveryReviewView.swift`
+- `ForgeLab/Features/Discovery/Views/DiscoveryAnswerSummaryView.swift`
+
 Files modified:
 
 - `ForgeLab/App/ForgeLabApp.swift`
@@ -84,3 +121,19 @@ Files modified:
 - `README.md`
 - `ROADMAP.md`
 - `CHANGELOG.md`
+
+Milestone 3 files modified:
+
+- `ForgeLab/Models/Project.swift`
+- `ForgeLab/Features/ProjectWorkspace/ViewModels/ProjectWorkspaceViewModel.swift`
+- `ForgeLab/Features/ProjectWorkspace/Views/ProjectWorkspaceView.swift`
+- `ForgeLab/Features/ProjectWorkspace/Views/WorkspacePlaceholderView.swift`
+- `ForgeLab.xcodeproj/project.pbxproj`
+- `README.md`
+- `ROADMAP.md`
+- `CHANGELOG.md`
+
+Remaining work:
+
+- Planner Agent, Coding Agent, Project Digital Twin, architecture generation, documentation generation, code generation, and Validation Engine remain future milestones.
+- Full command-line build verification requires selecting a full Xcode installation with `xcode-select`.

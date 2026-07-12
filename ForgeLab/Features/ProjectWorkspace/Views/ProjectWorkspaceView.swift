@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProjectWorkspaceView: View {
     @StateObject private var viewModel: ProjectWorkspaceViewModel
+    @State private var isShowingDiscovery = false
 
     init(viewModel: ProjectWorkspaceViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -21,7 +22,10 @@ struct ProjectWorkspaceView: View {
             if let selectedSection = viewModel.selectedSection {
                 WorkspacePlaceholderView(
                     project: viewModel.project,
-                    section: selectedSection
+                    section: selectedSection,
+                    onStartDiscovery: {
+                        isShowingDiscovery = true
+                    }
                 )
             } else {
                 ContentUnavailableView(
@@ -33,6 +37,13 @@ struct ProjectWorkspaceView: View {
         }
         .task {
             await viewModel.load()
+        }
+        .sheet(isPresented: $isShowingDiscovery) {
+            DiscoverySessionView(
+                viewModel: viewModel.makeDiscoverySessionViewModel()
+            ) { updatedProject in
+                viewModel.updateProject(updatedProject)
+            }
         }
     }
 }
