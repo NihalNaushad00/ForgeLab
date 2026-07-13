@@ -6,7 +6,7 @@ The central object in the app is the `Project`. A project can contain discovery 
 
 ## Current Scope
 
-This repository currently implements the project management foundation and the first guided discovery workflow:
+This repository currently implements the project management foundation, guided discovery workflow, and first planning workflow:
 
 - SwiftUI iOS app shell.
 - MVVM feature structure.
@@ -15,6 +15,7 @@ This repository currently implements the project management foundation and the f
 - Project list, creation, editing, deletion, and detail views.
 - Project workspace navigation with real project overview metadata.
 - Guided Discovery Sessions stored with projects.
+- Planner Agent generation of persisted Product Specifications from completed Discovery Sessions.
 - Starter documentation structure.
 
 The current version intentionally does not include AI integrations, networking, authentication, cloud sync, team collaboration, or code generation workflows.
@@ -26,6 +27,7 @@ ForgeLab/
   App/                         App entry point and composition root
   Core/Persistence/            Persistence interfaces and local store
   Features/Discovery/          Guided project discovery workflow
+  Features/Planner/            Product Specification generation and summary UI
   Features/ProjectManagement/  Project list, details, and edit flows
   Features/ProjectWorkspace/   Workspace MVVM feature
   Models/                      Core domain models
@@ -62,6 +64,30 @@ The current environment only has Command Line Tools selected, so command-line `x
 - Reopen a project workspace and view saved discovery answers.
 
 The Discovery Engine only gathers project context. It does not generate architecture, milestones, documentation, code, validation reports, or implementation plans.
+
+## Milestone 4 Features
+
+- Generate a structured Product Specification after Discovery is complete.
+- Analyze saved Discovery answers for purpose, users, platform, features, authentication, database, API, and difficulty signals.
+- Present the generated plan in a Planner summary screen.
+- Regenerate the Product Specification from the latest saved Discovery Session.
+- Persist the generated Product Specification with the project.
+- Reopen a project workspace and view the saved plan summary.
+
+The Planner Agent only produces a planning artifact. It does not generate code, run validation, orchestrate LLM calls, create documentation automatically, or maintain a Project Digital Twin.
+
+## Milestone 4 Implementation Notes
+
+Updated model:
+
+- `ProductSpecification` now stores project summary, recommended tech stack, architecture style, main features, suggested folder structure, database requirement, authentication requirement, API requirement, initial milestones, generation time, and source Discovery Session ID.
+- Existing locally saved starter specifications remain decodable through compatibility fallbacks.
+
+New Planner workflow:
+
+- `PlannerAgent` converts a completed `DiscoverySession` into a deterministic Product Specification.
+- `PlannerSummaryViewModel` persists generated and regenerated plans through the existing repository pattern.
+- `PlannerSummaryView` displays the saved Product Specification and provides regenerate and return-to-workspace actions.
 
 ## Milestone 3 Implementation Notes
 
@@ -106,6 +132,12 @@ Milestone 3 files added:
 - `ForgeLab/Features/Discovery/Views/DiscoveryReviewView.swift`
 - `ForgeLab/Features/Discovery/Views/DiscoveryAnswerSummaryView.swift`
 
+Milestone 4 files added:
+
+- `ForgeLab/Features/Planner/Services/PlannerAgent.swift`
+- `ForgeLab/Features/Planner/ViewModels/PlannerSummaryViewModel.swift`
+- `ForgeLab/Features/Planner/Views/PlannerSummaryView.swift`
+
 Files modified:
 
 - `ForgeLab/App/ForgeLabApp.swift`
@@ -133,7 +165,20 @@ Milestone 3 files modified:
 - `ROADMAP.md`
 - `CHANGELOG.md`
 
+Milestone 4 files modified:
+
+- `ForgeLab/Models/ProductSpecification.swift`
+- `ForgeLab/Features/ProjectWorkspace/ViewModels/ProjectWorkspaceViewModel.swift`
+- `ForgeLab/Features/ProjectWorkspace/Views/ProjectWorkspaceView.swift`
+- `ForgeLab/Features/ProjectWorkspace/Views/WorkspacePlaceholderView.swift`
+- `ForgeLab/Features/ProjectManagement/Views/ProjectDetailView.swift`
+- `ForgeLab.xcodeproj/project.pbxproj`
+- `Documentation/Product/ProductSpecification.md`
+- `README.md`
+- `ROADMAP.md`
+- `CHANGELOG.md`
+
 Remaining work:
 
-- Planner Agent, Coding Agent, Project Digital Twin, architecture generation, documentation generation, code generation, and Validation Engine remain future milestones.
+- Coding Agent, Project Digital Twin, documentation generation, code generation, and Validation Engine remain future milestones.
 - Full command-line build verification requires selecting a full Xcode installation with `xcode-select`.

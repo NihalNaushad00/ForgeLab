@@ -6,55 +6,68 @@ struct DiscoverySessionView: View {
     @State private var isSaving = false
 
     let onCompletion: (Project) -> Void
+    let isEmbeddedInNavigation: Bool
 
     init(
         viewModel: DiscoverySessionViewModel,
+        isEmbeddedInNavigation: Bool = false,
         onCompletion: @escaping (Project) -> Void
     ) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        self.isEmbeddedInNavigation = isEmbeddedInNavigation
         self.onCompletion = onCompletion
     }
 
     var body: some View {
-        NavigationStack {
-            Group {
-                switch viewModel.mode {
-                case .questions:
-                    questionView
-                case .review:
-                    DiscoveryReviewView(
-                        answers: viewModel.answers,
-                        isSaving: isSaving,
-                        onEdit: viewModel.editAnswer
-                    ) {
-                        Task {
-                            await confirmDiscovery()
-                        }
+        if isEmbeddedInNavigation {
+            content
+        } else {
+            NavigationStack {
+                content
+            }
+        }
+    }
+
+    private var content: some View {
+        Group {
+            switch viewModel.mode {
+            case .questions:
+                questionView
+            case .review:
+                DiscoveryReviewView(
+                    answers: viewModel.answers,
+                    isSaving: isSaving,
+                    onEdit: viewModel.editAnswer
+                ) {
+                    Task {
+                        await confirmDiscovery()
                     }
                 }
             }
-            .toolbar {
+        }
+        .toolbar {
+            if !isEmbeddedInNavigation {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Close") {
                         dismiss()
                     }
                 }
             }
-            .alert(
-                "Discovery Error",
-                isPresented: Binding(
-                    get: { viewModel.errorMessage != nil },
-                    set: { isPresented in
-                        if !isPresented {
-                            viewModel.clearError()
-                        }
+        }
+        .alert(
+            "Discovery Error",
+            isPresented: Binding(
+                get: { viewModel.errorMessage != nil },
+                set: { isPresented in
+                    if !isPresented {
+                        viewModel.clearError()
                     }
-                )
-            ) {
-                Button("OK", role: .cancel) {}
-            } message: {
-                Text(viewModel.errorMessage ?? "")
-            }
+                }
+            )
+        ) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(viewModel.errorMessage ?? "")
         }
     }
 
@@ -154,7 +167,9 @@ struct DiscoverySessionView: View {
 
         if let project = await viewModel.confirmCompletion() {
             onCompletion(project)
-            dismiss()
+            if !isEmbeddedInNavigation {
+                dismiss()
+            }
         }
     }
 }

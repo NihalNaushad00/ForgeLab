@@ -1,5 +1,30 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Added the Planner Agent as a Project Workspace flow after Discovery completion.
+- Added generated Product Specifications with project summary, tech stack, architecture style, features, folder structure, database, authentication, API, and initial milestones.
+- Added a Planner summary screen for reading and regenerating the saved Product Specification.
+- Added persisted Planner output through the existing project repository and local JSON storage.
+
+### Changed
+
+- Expanded `ProductSpecification` from a starter intent model into the structured Planner output model while keeping compatibility with older saved data.
+- Project workspace overview now includes Planner status and actions after Discovery is complete.
+- Workspace now opens as the central project hub instead of automatically selecting Overview.
+- Workspace hub now displays a clear heading, selected project name, and direct project-area actions.
+- Workspace navigation now includes a separate Project Planner section between Discovery and Specifications.
+
+### Fixed
+
+- Fixed Workspace Overview navigation after returning to the workspace by routing the sidebar Overview action through the shared project overview view.
+- Reused the same Overview implementation from the Project Dashboard and Project Workspace while preserving the selected project context.
+- Removed duplicate navigation containers from Discovery and Project Planner when they are opened inside Workspace.
+- Fixed Workspace section navigation on iPhone by replacing split-view selection rows with native Workspace hub navigation links.
+- Kept Workspace section routing tied to the active project so Overview, Discovery, Project Planner, and placeholder sections retain project context.
+
 ## 0.3.0 - 2026-07-12
 
 ### Added

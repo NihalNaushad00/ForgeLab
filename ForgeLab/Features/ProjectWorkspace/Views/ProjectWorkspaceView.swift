@@ -2,48 +2,87 @@ import SwiftUI
 
 struct ProjectWorkspaceView: View {
     @StateObject private var viewModel: ProjectWorkspaceViewModel
-    @State private var isShowingDiscovery = false
 
     init(viewModel: ProjectWorkspaceViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
-        NavigationSplitView {
-            List(
-                WorkspaceSection.allCases,
-                selection: $viewModel.selectedSection
-            ) { section in
-                Label(section.title, systemImage: section.systemImage)
-                    .tag(section)
-            }
-            .navigationTitle("Workspace")
-        } detail: {
-            if let selectedSection = viewModel.selectedSection {
-                WorkspacePlaceholderView(
-                    project: viewModel.project,
-                    section: selectedSection,
-                    onStartDiscovery: {
-                        isShowingDiscovery = true
-                    }
-                )
-            } else {
-                ContentUnavailableView(
-                    "Select a Section",
-                    systemImage: "sidebar.left",
-                    description: Text("Choose a workspace area to continue.")
-                )
-            }
-        }
+        workspaceHub
         .task {
             await viewModel.load()
         }
-        .sheet(isPresented: $isShowingDiscovery) {
+    }
+
+    private var workspaceHub: some View {
+        List {
+            Section {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Workspace")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+
+                    Text(viewModel.project.name)
+                        .font(.headline)
+
+                    Text("Choose a project area to continue.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                .padding(.vertical, 8)
+            }
+
+            Section("Project Areas") {
+                ForEach(WorkspaceSection.allCases) { section in
+                    NavigationLink {
+                        workspaceDetail(for: section)
+                    } label: {
+                        Label(section.title, systemImage: section.systemImage)
+                    }
+                }
+            }
+        }
+        .navigationTitle("Workspace")
+    }
+
+    @ViewBuilder
+    private func workspaceDetail(for section: WorkspaceSection) -> some View {
+        switch section {
+        case .overview:
+            ProjectOverviewView(
+                project: viewModel.project,
+                onStartDiscovery: {
+                    viewModel.selectedSection = .discovery
+                },
+                onGeneratePlan: {
+                    viewModel.selectedSection = .planner
+                }
+            )
+        case .discovery:
             DiscoverySessionView(
-                viewModel: viewModel.makeDiscoverySessionViewModel()
+                viewModel: viewModel.makeDiscoverySessionViewModel(),
+                isEmbeddedInNavigation: true
             ) { updatedProject in
                 viewModel.updateProject(updatedProject)
             }
+        case .planner:
+            PlannerSummaryView(
+                viewModel: viewModel.makePlannerSummaryViewModel(),
+                isEmbeddedInNavigation: true
+            ) { updatedProject in
+                viewModel.updateProject(updatedProject)
+            }
+        case .specifications,
+                .documentation,
+                .milestones,
+                .tasks,
+                .learning,
+                .validation,
+                .settings:
+            WorkspacePlaceholderView(
+                section: section,
+                project: viewModel.project
+            )
         }
     }
 }

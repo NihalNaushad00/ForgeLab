@@ -30,6 +30,14 @@
 - Persisted completed Discovery Sessions with projects through the existing repository pattern.
 - Added workspace display for saved discovery answers.
 
+### Milestone 4: Planner Agent
+
+- Added a Planner Agent that generates a structured Product Specification from a completed Discovery Session.
+- Added deterministic planning logic for project summary, tech stack, architecture style, features, folder structure, database, authentication, API, and initial milestones.
+- Added a Planner summary screen for reading and regenerating the saved Product Specification.
+- Persisted generated Product Specifications with projects through the existing repository pattern.
+- Added workspace display for saved plan status and summary.
+
 ## Future Milestones
 
 - Requirements and specification capture.
@@ -38,7 +46,6 @@
 - Documentation review surfaces.
 - Validation report generation.
 - Learning resource organization.
-- Planner Agent.
 - Coding Agent.
 - Project Digital Twin.
 - AI integrations after the core workflow is stable.

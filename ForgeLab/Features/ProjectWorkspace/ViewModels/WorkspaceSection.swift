@@ -1,8 +1,9 @@
 import Foundation
 
-enum WorkspaceSection: String, CaseIterable, Identifiable {
+enum WorkspaceSection: String, CaseIterable, Hashable, Identifiable {
     case overview
-    case requirements
+    case discovery
+    case planner
     case specifications
     case documentation
     case milestones
@@ -17,8 +18,10 @@ enum WorkspaceSection: String, CaseIterable, Identifiable {
         switch self {
         case .overview:
             "Overview"
-        case .requirements:
-            "Requirements"
+        case .discovery:
+            "Discovery"
+        case .planner:
+            "Project Planner"
         case .specifications:
             "Specifications"
         case .documentation:
@@ -40,8 +43,10 @@ enum WorkspaceSection: String, CaseIterable, Identifiable {
         switch self {
         case .overview:
             "rectangle.grid.2x2"
-        case .requirements:
+        case .discovery:
             "checklist"
+        case .planner:
+            "map"
         case .specifications:
             "doc.text"
         case .documentation:

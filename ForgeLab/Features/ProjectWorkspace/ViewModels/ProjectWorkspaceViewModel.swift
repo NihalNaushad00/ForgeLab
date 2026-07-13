@@ -11,7 +11,6 @@ final class ProjectWorkspaceViewModel: ObservableObject {
     init(project: Project, projectRepository: ProjectRepository) {
         self.projectRepository = projectRepository
         self.project = project
-        selectedSection = WorkspaceSection.allCases.first
     }
 
     func load() async {
@@ -26,6 +25,13 @@ final class ProjectWorkspaceViewModel: ObservableObject {
 
     func makeDiscoverySessionViewModel() -> DiscoverySessionViewModel {
         DiscoverySessionViewModel(
+            project: project,
+            projectRepository: projectRepository
+        )
+    }
+
+    func makePlannerSummaryViewModel() -> PlannerSummaryViewModel {
+        PlannerSummaryViewModel(
             project: project,
             projectRepository: projectRepository
         )
