@@ -8,6 +8,10 @@
 - Added generated Product Specifications with project summary, tech stack, architecture style, features, folder structure, database, authentication, API, and initial milestones.
 - Added a Planner summary screen for reading and regenerating the saved Product Specification.
 - Added persisted Planner output through the existing project repository and local JSON storage.
+- Added a persisted Project Digital Twin model owned by each project.
+- Added Digital Twin builder logic that derives twin state from Project, Discovery, and Planner data.
+- Added a Project Digital Twin dashboard in the Workspace.
+- Added automatic Digital Twin refresh during repository saves and load-time migration for older projects.
 
 ### Changed
 
@@ -15,7 +19,8 @@
 - Project workspace overview now includes Planner status and actions after Discovery is complete.
 - Workspace now opens as the central project hub instead of automatically selecting Overview.
 - Workspace hub now displays a clear heading, selected project name, and direct project-area actions.
-- Workspace navigation now includes a separate Project Planner section between Discovery and Specifications.
+- Workspace navigation now includes Project Planner and Project Digital Twin sections between Discovery and Specifications.
+- Discovery and Planner save flows now refetch the saved project so the Workspace receives the refreshed Digital Twin immediately.
 
 ### Fixed
 

@@ -38,6 +38,15 @@
 - Persisted generated Product Specifications with projects through the existing repository pattern.
 - Added workspace display for saved plan status and summary.
 
+### Milestone 5: Project Digital Twin
+
+- Added a persisted Project Digital Twin owned by each project.
+- Added a twin data model for project information, Discovery answers, Product Specification data, Planner output, current status, progress, current milestone, and last updated timestamp.
+- Added isolated Digital Twin builder logic that derives the twin from the Project aggregate.
+- Updated repository save and load paths to create, refresh, migrate, and persist the twin automatically.
+- Added a Project Digital Twin dashboard to the Workspace.
+- Updated Workspace order to Overview, Discovery, Project Planner, Project Digital Twin, Specifications, Documentation, Milestones, Tasks, Learning, Validation, Settings.
+
 ## Future Milestones
 
 - Requirements and specification capture.
@@ -47,5 +56,4 @@
 - Validation report generation.
 - Learning resource organization.
 - Coding Agent.
-- Project Digital Twin.
 - AI integrations after the core workflow is stable.

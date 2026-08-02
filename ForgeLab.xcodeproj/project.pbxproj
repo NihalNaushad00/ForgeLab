@@ -18,6 +18,10 @@
 		A10000000000000000000007 /* PlannerAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* PlannerAgent.swift */; };
 		A10000000000000000000008 /* PlannerSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* PlannerSummaryViewModel.swift */; };
 		A10000000000000000000009 /* PlannerSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* PlannerSummaryView.swift */; };
+		A10000000000000000000010 /* ProjectDigitalTwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* ProjectDigitalTwin.swift */; };
+		A10000000000000000000011 /* ProjectDigitalTwinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* ProjectDigitalTwinBuilder.swift */; };
+		A10000000000000000000012 /* ProjectDigitalTwinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* ProjectDigitalTwinViewModel.swift */; };
+		A10000000000000000000013 /* ProjectDigitalTwinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* ProjectDigitalTwinView.swift */; };
 		2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF1D6995F2447ACADF91A2B /* ProjectListViewModel.swift */; };
 		2E60A0469C7C4F3B96CD517E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B68491F174CEF936D6BE6 /* Project.swift */; };
 		35327DC8080D411C9DC9674C /* WorkPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91D87B0B34E4BA203659D /* WorkPackage.swift */; };
@@ -73,6 +77,10 @@
 		A20000000000000000000007 /* PlannerAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerAgent.swift; sourceTree = "<group>"; };
 		A20000000000000000000008 /* PlannerSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerSummaryViewModel.swift; sourceTree = "<group>"; };
 		A20000000000000000000009 /* PlannerSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerSummaryView.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* ProjectDigitalTwin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDigitalTwin.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* ProjectDigitalTwinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDigitalTwinBuilder.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* ProjectDigitalTwinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDigitalTwinViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* ProjectDigitalTwinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDigitalTwinView.swift; sourceTree = "<group>"; };
 		A4AAB431B622461EACD5D903 /* DateFormatter+ForgeLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ForgeLab.swift"; sourceTree = "<group>"; };
 		AB89C7A7A17041CFA3B10A40 /* ProjectFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFormViewModel.swift; sourceTree = "<group>"; };
 		B32CFB2E4A054E66BABB0F0C /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 		37BC2C4B4D134364812D5FE7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A30000000000000000000008 /* DigitalTwin */,
 				A30000000000000000000001 /* Discovery */,
 				A30000000000000000000004 /* Planner */,
 				4F4EAEB207B6471BBECFBDC1 /* ProjectManagement */,
@@ -246,6 +255,40 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A30000000000000000000008 /* DigitalTwin */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000009 /* Services */,
+				A30000000000000000000010 /* ViewModels */,
+				A30000000000000000000011 /* Views */,
+			);
+			path = DigitalTwin;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000011 /* ProjectDigitalTwinBuilder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000010 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000012 /* ProjectDigitalTwinViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000013 /* ProjectDigitalTwinView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A8EFD2D66D1B49439CA8BF8C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +320,7 @@
 			children = (
 				3A9B68491F174CEF936D6BE6 /* Project.swift */,
 				0CB86E91CA44474A8A66FBA1 /* ProjectType.swift */,
+				A20000000000000000000010 /* ProjectDigitalTwin.swift */,
 				A20000000000000000000001 /* DiscoverySession.swift */,
 				FC60838F7E844D1F99890340 /* Milestone.swift */,
 				46A91D87B0B34E4BA203659D /* WorkPackage.swift */,
@@ -420,6 +464,10 @@
 				A10000000000000000000007 /* PlannerAgent.swift in Sources */,
 				A10000000000000000000008 /* PlannerSummaryViewModel.swift in Sources */,
 				A10000000000000000000009 /* PlannerSummaryView.swift in Sources */,
+				A10000000000000000000010 /* ProjectDigitalTwin.swift in Sources */,
+				A10000000000000000000011 /* ProjectDigitalTwinBuilder.swift in Sources */,
+				A10000000000000000000012 /* ProjectDigitalTwinViewModel.swift in Sources */,
+				A10000000000000000000013 /* ProjectDigitalTwinView.swift in Sources */,
 				2086D5468AC9404482276E56 /* ProjectListViewModel.swift in Sources */,
 				5D64F7AAECD74A9AB3001698 /* ProjectFormViewModel.swift in Sources */,
 				88C7D9F1BF004D10AEC244A8 /* ProjectListView.swift in Sources */,

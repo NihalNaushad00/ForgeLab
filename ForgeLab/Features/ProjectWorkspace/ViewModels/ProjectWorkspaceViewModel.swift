@@ -37,6 +37,10 @@ final class ProjectWorkspaceViewModel: ObservableObject {
         )
     }
 
+    func makeDigitalTwinViewModel() -> ProjectDigitalTwinViewModel {
+        ProjectDigitalTwinViewModel(project: project)
+    }
+
     func updateProject(_ project: Project) {
         self.project = project
     }

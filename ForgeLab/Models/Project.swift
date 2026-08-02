@@ -15,6 +15,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
     var validationReports: [ValidationReport]
     var learningResources: [String]
     var discoverySession: DiscoverySession?
+    var digitalTwin: ProjectDigitalTwin
     let createdAt: Date
     var updatedAt: Date
 
@@ -33,6 +34,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         case validationReports
         case learningResources
         case discoverySession
+        case digitalTwin
         case createdAt
         case updatedAt
     }
@@ -52,6 +54,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         validationReports: [ValidationReport] = [],
         learningResources: [String] = [],
         discoverySession: DiscoverySession? = nil,
+        digitalTwin: ProjectDigitalTwin? = nil,
         createdAt: Date = Date(),
         updatedAt: Date = Date()
     ) {
@@ -69,6 +72,14 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         self.validationReports = validationReports
         self.learningResources = learningResources
         self.discoverySession = discoverySession
+        self.digitalTwin = digitalTwin ?? ProjectDigitalTwin.bootstrap(
+            projectID: id,
+            name: name,
+            summary: summary,
+            type: type,
+            createdAt: createdAt,
+            updatedAt: updatedAt
+        )
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
@@ -104,5 +115,14 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         discoverySession = try container.decodeIfPresent(DiscoverySession.self, forKey: .discoverySession)
         createdAt = try container.decodeIfPresent(Date.self, forKey: .createdAt) ?? Date()
         updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt) ?? createdAt
+        digitalTwin = try container.decodeIfPresent(ProjectDigitalTwin.self, forKey: .digitalTwin)
+            ?? ProjectDigitalTwin.bootstrap(
+                projectID: id,
+                name: name,
+                summary: summary,
+                type: type,
+                createdAt: createdAt,
+                updatedAt: updatedAt
+            )
     }
 }

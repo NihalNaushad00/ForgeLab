@@ -131,6 +131,9 @@ final class DiscoverySessionViewModel: ObservableObject {
 
         do {
             try await projectRepository.save(project)
+            if let savedProject = try await projectRepository.project(withID: project.id) {
+                project = savedProject
+            }
             errorMessage = nil
             return project
         } catch {

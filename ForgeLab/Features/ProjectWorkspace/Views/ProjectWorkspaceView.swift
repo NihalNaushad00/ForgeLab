@@ -72,6 +72,10 @@ struct ProjectWorkspaceView: View {
             ) { updatedProject in
                 viewModel.updateProject(updatedProject)
             }
+        case .digitalTwin:
+            ProjectDigitalTwinView(
+                viewModel: viewModel.makeDigitalTwinViewModel()
+            )
         case .specifications,
                 .documentation,
                 .milestones,

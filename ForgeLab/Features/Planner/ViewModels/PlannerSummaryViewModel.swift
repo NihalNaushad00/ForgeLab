@@ -43,9 +43,9 @@ final class PlannerSummaryViewModel: ObservableObject {
 
         do {
             try await projectRepository.save(updatedProject)
-            project = updatedProject
+            project = try await projectRepository.project(withID: updatedProject.id) ?? updatedProject
             errorMessage = nil
-            return updatedProject
+            return project
         } catch {
             errorMessage = "Project plan could not be saved."
             return nil
