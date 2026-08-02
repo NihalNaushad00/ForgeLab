@@ -4,6 +4,7 @@ enum WorkspaceSection: String, CaseIterable, Hashable, Identifiable {
     case overview
     case discovery
     case planner
+    case codingAgent
     case digitalTwin
     case specifications
     case documentation
@@ -23,6 +24,8 @@ enum WorkspaceSection: String, CaseIterable, Hashable, Identifiable {
             "Discovery"
         case .planner:
             "Project Planner"
+        case .codingAgent:
+            "Coding Agent"
         case .digitalTwin:
             "Project Digital Twin"
         case .specifications:
@@ -50,6 +53,8 @@ enum WorkspaceSection: String, CaseIterable, Hashable, Identifiable {
             "checklist"
         case .planner:
             "map"
+        case .codingAgent:
+            "hammer"
         case .digitalTwin:
             "cpu"
         case .specifications:

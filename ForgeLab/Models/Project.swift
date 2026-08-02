@@ -16,6 +16,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
     var learningResources: [String]
     var discoverySession: DiscoverySession?
     var digitalTwin: ProjectDigitalTwin
+    var codingAgentState: CodingAgentState
     let createdAt: Date
     var updatedAt: Date
 
@@ -35,6 +36,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         case learningResources
         case discoverySession
         case digitalTwin
+        case codingAgentState
         case createdAt
         case updatedAt
     }
@@ -55,6 +57,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
         learningResources: [String] = [],
         discoverySession: DiscoverySession? = nil,
         digitalTwin: ProjectDigitalTwin? = nil,
+        codingAgentState: CodingAgentState = CodingAgentState(),
         createdAt: Date = Date(),
         updatedAt: Date = Date()
     ) {
@@ -80,6 +83,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
             createdAt: createdAt,
             updatedAt: updatedAt
         )
+        self.codingAgentState = codingAgentState
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
@@ -124,5 +128,7 @@ struct Project: Identifiable, Codable, Equatable, Sendable {
                 createdAt: createdAt,
                 updatedAt: updatedAt
             )
+        codingAgentState = try container.decodeIfPresent(CodingAgentState.self, forKey: .codingAgentState)
+            ?? CodingAgentState(updatedAt: updatedAt)
     }
 }

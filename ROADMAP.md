@@ -47,6 +47,16 @@
 - Added a Project Digital Twin dashboard to the Workspace.
 - Updated Workspace order to Overview, Discovery, Project Planner, Project Digital Twin, Specifications, Documentation, Milestones, Tasks, Learning, Validation, Settings.
 
+### Milestone 6: Coding Agent
+
+- Added a first-version Coding Agent that prepares implementation workflow artifacts from Planner output.
+- Added generated Work Packages from Product Specification features and technical requirements.
+- Added generated Tasks linked to Work Packages.
+- Added persisted Coding Agent state with status, current Work Package, current Task, source Product Specification, and timestamps.
+- Added a Coding Queue with Pending, In Progress, Completed, and Future task buckets.
+- Added a Coding Agent Workspace screen for viewing Planner summary, current position, queue state, and generated work.
+- Updated the Project Digital Twin to summarize Coding Agent status and queue counts.
+
 ## Future Milestones
 
 - Requirements and specification capture.
@@ -55,5 +65,5 @@
 - Documentation review surfaces.
 - Validation report generation.
 - Learning resource organization.
-- Coding Agent.
+- File generation and full application generation.
 - AI integrations after the core workflow is stable.

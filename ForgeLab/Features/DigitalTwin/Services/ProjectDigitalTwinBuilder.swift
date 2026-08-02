@@ -19,8 +19,9 @@ struct ProjectDigitalTwinBuilder {
             productSpecification: productSpecification,
             plannerOutput: project.productSpecification.map(makePlannerOutput),
             currentStatus: currentStatus(for: project),
-            progress: ProjectDigitalTwinProgress(completedSteps: completedSteps, totalSteps: 3),
+            progress: ProjectDigitalTwinProgress(completedSteps: completedSteps, totalSteps: 4),
             currentMilestone: currentMilestone(for: project),
+            codingSummary: makeCodingSummary(for: project),
             lastUpdated: updatedAt
         )
     }
@@ -73,10 +74,26 @@ struct ProjectDigitalTwinBuilder {
             completedSteps += 1
         }
 
+        if project.codingAgentState.status != .notStarted {
+            completedSteps += 1
+        }
+
         return completedSteps
     }
 
     private func currentStatus(for project: Project) -> String {
+        if project.codingAgentState.status == .completed {
+            return "Coding workflow complete"
+        }
+
+        if project.codingAgentState.status == .inProgress {
+            return "Coding workflow in progress"
+        }
+
+        if project.codingAgentState.status == .generated {
+            return "Coding workflow generated"
+        }
+
         if project.productSpecification != nil {
             return "Product Specification generated"
         }
@@ -89,6 +106,12 @@ struct ProjectDigitalTwinBuilder {
     }
 
     private func currentMilestone(for project: Project) -> String {
+        if let currentWorkPackage = project.workPackages.first(
+            where: { $0.id == project.codingAgentState.currentWorkPackageID }
+        ) {
+            return currentWorkPackage.title
+        }
+
         if let milestone = project.productSpecification?.initialMilestones.first {
             return milestone
         }
@@ -98,5 +121,21 @@ struct ProjectDigitalTwinBuilder {
         }
 
         return "Discovery"
+    }
+
+    private func makeCodingSummary(for project: Project) -> ProjectDigitalTwinCodingSummary? {
+        guard project.codingAgentState.status != .notStarted else {
+            return nil
+        }
+
+        return ProjectDigitalTwinCodingSummary(
+            status: project.codingAgentState.status.displayName,
+            workPackageCount: project.workPackages.filter { $0.source == .codingAgent }.count,
+            taskCount: project.tasks.filter { $0.workPackageID != nil }.count,
+            pendingTaskCount: project.codingAgentState.queue.pendingTaskIDs.count,
+            inProgressTaskCount: project.codingAgentState.queue.inProgressTaskIDs.count,
+            completedTaskCount: project.codingAgentState.queue.completedTaskIDs.count,
+            futureTaskCount: project.codingAgentState.queue.futureTaskIDs.count
+        )
     }
 }

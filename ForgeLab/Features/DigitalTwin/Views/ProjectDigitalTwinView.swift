@@ -72,6 +72,21 @@ struct ProjectDigitalTwinView: View {
                 )
             }
 
+            Section("Coding Agent") {
+                if let codingSummary = twin.codingSummary {
+                    LabeledContent("Status", value: codingSummary.status)
+                    LabeledContent("Work Packages", value: "\(codingSummary.workPackageCount)")
+                    LabeledContent("Tasks", value: "\(codingSummary.taskCount)")
+                    LabeledContent("Pending", value: "\(codingSummary.pendingTaskCount)")
+                    LabeledContent("In Progress", value: "\(codingSummary.inProgressTaskCount)")
+                    LabeledContent("Completed", value: "\(codingSummary.completedTaskCount)")
+                    LabeledContent("Future", value: "\(codingSummary.futureTaskCount)")
+                } else {
+                    Text("Coding Agent workflow has not been generated.")
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             Section("Current Milestone") {
                 Text(twin.currentMilestone)
             }

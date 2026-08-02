@@ -10,6 +10,7 @@ struct ProjectDigitalTwin: Identifiable, Codable, Equatable, Sendable {
     var currentStatus: String
     var progress: ProjectDigitalTwinProgress
     var currentMilestone: String
+    var codingSummary: ProjectDigitalTwinCodingSummary?
     var lastUpdated: Date
 
     init(
@@ -22,6 +23,7 @@ struct ProjectDigitalTwin: Identifiable, Codable, Equatable, Sendable {
         currentStatus: String = "Project created",
         progress: ProjectDigitalTwinProgress = ProjectDigitalTwinProgress(),
         currentMilestone: String = "Discovery",
+        codingSummary: ProjectDigitalTwinCodingSummary? = nil,
         lastUpdated: Date = Date()
     ) {
         self.id = id
@@ -33,6 +35,7 @@ struct ProjectDigitalTwin: Identifiable, Codable, Equatable, Sendable {
         self.currentStatus = currentStatus
         self.progress = progress
         self.currentMilestone = currentMilestone
+        self.codingSummary = codingSummary
         self.lastUpdated = lastUpdated
     }
 
@@ -112,4 +115,14 @@ struct ProjectDigitalTwinProgress: Codable, Equatable, Sendable {
 
         completionPercentage = Int((Double(completedSteps) / Double(totalSteps) * 100).rounded())
     }
+}
+
+struct ProjectDigitalTwinCodingSummary: Codable, Equatable, Sendable {
+    var status: String
+    var workPackageCount: Int
+    var taskCount: Int
+    var pendingTaskCount: Int
+    var inProgressTaskCount: Int
+    var completedTaskCount: Int
+    var futureTaskCount: Int
 }

@@ -41,6 +41,13 @@ final class ProjectWorkspaceViewModel: ObservableObject {
         ProjectDigitalTwinViewModel(project: project)
     }
 
+    func makeCodingAgentViewModel() -> CodingAgentViewModel {
+        CodingAgentViewModel(
+            project: project,
+            projectRepository: projectRepository
+        )
+    }
+
     func updateProject(_ project: Project) {
         self.project = project
     }

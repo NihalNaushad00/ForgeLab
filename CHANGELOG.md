@@ -12,6 +12,10 @@
 - Added Digital Twin builder logic that derives twin state from Project, Discovery, and Planner data.
 - Added a Project Digital Twin dashboard in the Workspace.
 - Added automatic Digital Twin refresh during repository saves and load-time migration for older projects.
+- Added a first-version Coding Agent that generates implementation Work Packages and Tasks from Planner output.
+- Added persisted Coding Agent state with queue, current Work Package, current Task, status, source Product Specification, and generation timestamps.
+- Added a Coding Queue with Pending, In Progress, Completed, and Future task buckets.
+- Added a Coding Agent Workspace screen for viewing current project, Planner summary, current milestone, current Work Package, current task, status, queue, and generated work.
 
 ### Changed
 
@@ -21,6 +25,10 @@
 - Workspace hub now displays a clear heading, selected project name, and direct project-area actions.
 - Workspace navigation now includes Project Planner and Project Digital Twin sections between Discovery and Specifications.
 - Discovery and Planner save flows now refetch the saved project so the Workspace receives the refreshed Digital Twin immediately.
+- Workspace navigation now includes Coding Agent after Project Planner.
+- `WorkPackage` now records whether a package was generated manually or by the Coding Agent.
+- `ProjectTask` now stores an optional Work Package link.
+- Project Digital Twin now summarizes Coding Agent workflow status and queue counts.
 
 ### Fixed
 

@@ -40,6 +40,9 @@ struct PreviewProjectRepository: ProjectRepository {
                 }
             )
         )
+        if let codingProject = CodingAgent().generateWorkflow(for: project) {
+            project = codingProject
+        }
         project.digitalTwin = ProjectDigitalTwinBuilder().buildTwin(
             for: project,
             updatedAt: project.updatedAt

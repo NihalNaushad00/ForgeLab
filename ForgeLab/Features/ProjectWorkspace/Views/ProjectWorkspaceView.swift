@@ -72,6 +72,12 @@ struct ProjectWorkspaceView: View {
             ) { updatedProject in
                 viewModel.updateProject(updatedProject)
             }
+        case .codingAgent:
+            CodingAgentView(
+                viewModel: viewModel.makeCodingAgentViewModel()
+            ) { updatedProject in
+                viewModel.updateProject(updatedProject)
+            }
         case .digitalTwin:
             ProjectDigitalTwinView(
                 viewModel: viewModel.makeDigitalTwinViewModel()

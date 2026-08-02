@@ -6,7 +6,7 @@ The central object in the app is the `Project`. A project can contain discovery 
 
 ## Current Scope
 
-This repository currently implements the project management foundation, guided discovery workflow, first planning workflow, and persistent Project Digital Twin:
+This repository currently implements the project management foundation, guided discovery workflow, first planning workflow, persistent Project Digital Twin, and first Coding Agent workflow:
 
 - SwiftUI iOS app shell.
 - MVVM feature structure.
@@ -17,9 +17,10 @@ This repository currently implements the project management foundation, guided d
 - Guided Discovery Sessions stored with projects.
 - Planner Agent generation of persisted Product Specifications from completed Discovery Sessions.
 - Project Digital Twin projection stored with each project and synchronized from Project, Discovery, and Planner state.
+- Coding Agent generation of persisted Work Packages, Tasks, queue state, and workflow status from Planner output.
 - Starter documentation structure.
 
-The current version intentionally does not include AI integrations, networking, authentication, cloud sync, team collaboration, code generation workflows, Validation Agent behavior, Git integration, or automatic testing.
+The current version intentionally does not include AI integrations, networking, authentication, cloud sync, team collaboration, file generation, full application generation, Validation Agent behavior, Git integration, or automatic testing.
 
 ## Repository Structure
 
@@ -27,6 +28,7 @@ The current version intentionally does not include AI integrations, networking, 
 ForgeLab/
   App/                         App entry point and composition root
   Core/Persistence/            Persistence interfaces and local store
+  Features/CodingAgent/        Coding workflow planning, queue, and summary UI
   Features/DigitalTwin/        Project Digital Twin derivation and dashboard UI
   Features/Discovery/          Guided project discovery workflow
   Features/Planner/            Product Specification generation and summary UI
@@ -101,6 +103,42 @@ Files added:
 - `ForgeLab/Features/DigitalTwin/Services/ProjectDigitalTwinBuilder.swift`
 - `ForgeLab/Features/DigitalTwin/ViewModels/ProjectDigitalTwinViewModel.swift`
 - `ForgeLab/Features/DigitalTwin/Views/ProjectDigitalTwinView.swift`
+
+## Milestone 6 Features
+
+- Added a dedicated Coding Agent Workspace screen.
+- Generated Work Packages from the saved Product Specification.
+- Generated structured implementation Tasks for each Work Package.
+- Added a persisted Coding Queue with Pending, In Progress, Completed, and Future buckets.
+- Added persisted Coding Agent status, current work package, current task, source Product Specification, and generation timestamps.
+- Added task progression controls for completing the current task and advancing the queue.
+- Updated the Project Digital Twin summary with Coding Agent status and queue counts.
+
+## Milestone 6 Implementation Notes
+
+Coding Agent architecture:
+
+- `CodingAgent` is isolated from `PlannerAgent` and consumes only the persisted `ProductSpecification`.
+- The agent writes generated artifacts into the existing `Project.workPackages` and `Project.tasks` aggregate.
+- `CodingAgentState` stores queue and current-position metadata on `Project` so workflow state persists through the existing repository and JSON store.
+- The first version generates planning artifacts only. It does not generate source files, run tests, use Git, or perform validation.
+
+Work Package model:
+
+- `WorkPackage` now includes a `source` field so Coding Agent packages can be identified and regenerated without replacing future manually-authored packages.
+- Existing saved packages decode as `.manual`.
+
+Task model:
+
+- `ProjectTask` now includes an optional `workPackageID` so generated tasks remain linked to their Work Package.
+- Existing saved tasks decode with no package link.
+
+Milestone 6 files added:
+
+- `ForgeLab/Models/CodingAgentState.swift`
+- `ForgeLab/Features/CodingAgent/Services/CodingAgent.swift`
+- `ForgeLab/Features/CodingAgent/ViewModels/CodingAgentViewModel.swift`
+- `ForgeLab/Features/CodingAgent/Views/CodingAgentView.swift`
 
 ## Milestone 4 Implementation Notes
 
@@ -219,7 +257,24 @@ Milestone 5 files modified:
 - `ROADMAP.md`
 - `CHANGELOG.md`
 
+Milestone 6 files modified:
+
+- `ForgeLab/Models/Project.swift`
+- `ForgeLab/Models/WorkPackage.swift`
+- `ForgeLab/Models/ProjectTask.swift`
+- `ForgeLab/Models/ProjectDigitalTwin.swift`
+- `ForgeLab/Features/DigitalTwin/Services/ProjectDigitalTwinBuilder.swift`
+- `ForgeLab/Features/DigitalTwin/Views/ProjectDigitalTwinView.swift`
+- `ForgeLab/Features/ProjectWorkspace/ViewModels/WorkspaceSection.swift`
+- `ForgeLab/Features/ProjectWorkspace/ViewModels/ProjectWorkspaceViewModel.swift`
+- `ForgeLab/Features/ProjectWorkspace/Views/ProjectWorkspaceView.swift`
+- `ForgeLab/Utilities/PreviewProjectRepository.swift`
+- `ForgeLab.xcodeproj/project.pbxproj`
+- `README.md`
+- `ROADMAP.md`
+- `CHANGELOG.md`
+
 Remaining work:
 
-- Coding Agent, documentation generation, code generation, Validation Engine, Git integration, and automatic testing remain future milestones.
+- Documentation generation, file generation, full application generation, Validation Engine, Git integration, and automatic testing remain future milestones.
 - Full command-line build verification requires selecting a full Xcode installation with `xcode-select`.
